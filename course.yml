@@ -1,4 +1,4 @@
-title: Course Title Here
-description: A description of the course.
+title: Clinical Data at CHOP
+description: This course will teach you how to work with clinical data at CHOP in R.  This course will only be useful to you if you are an employee at the Children's Hospital of Philadelphia, as the coursework will include accessing datasets only available to users of the CHOP network.
 programming_language: r
 from: 'r-base-prod:30'
