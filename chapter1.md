@@ -1,8 +1,6 @@
 ---
-title: Template Chapter 1
-description: >-
-  This is a template chapter.
-
+title: Examining Clinical Data
+description: So, you've received some .csv files of clinical data.  How can you take a look at your data to confirm the data quality and prepare for the next steps?
 
 ---
 ## Accessing your clinical data files
@@ -38,11 +36,14 @@ str(demographics)
 `@sct`
 ```{r}
 test_error()
+test_function("read.csv",
+              not_called_msg = "Make sure to call `read.csv()`")
+test_function("str",
+              not_called_msg = "Make sure to call `str()`")
 test_object("demographics",
             undefined_msg = "Make sure to define `demographics`!",
             incorrect_msg = "Did you assign the contents of `https://s3.amazonaws.com/chop-dbhi-arcus-education-course-assets/sample_demographic.csv` to `x`?")
 success_msg("Great job.  By the way, it's considered good style to write spaces either side of the assignment arrow.")
-
 ```
 
 
